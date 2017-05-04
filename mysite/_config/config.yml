@@ -11,3 +11,8 @@ SSViewer:
   theme: 'one-ring'
 Debug:
   friendly_error_httpcode: true
+ArticleHolder:
+  allowed_children:
+    - ArticlePage
+ArticlePage:
+  can_be_root: false
