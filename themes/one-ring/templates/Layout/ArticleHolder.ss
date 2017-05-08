@@ -23,7 +23,7 @@
 							<div class="tag"><i class="fa fa-file-text"></i></div>
 							<div class="info-blog">
 								<ul class="top-info">
-									<li><i class="fa fa-calendar"></i> July 30, 2014</li>
+									<li><i class="fa fa-calendar"></i> $Date.Long</li>
 									<li><i class="fa fa-comments-o"></i> 2</li>
 									<li><i class="fa fa-tags"></i> Properties, Prices, best deals</li>
 								</ul>
@@ -31,7 +31,11 @@
 									<a href="$Link">$Title</a>
 								</h3>
 								<p>
-									$Content.FirstParagraph
+									<% if $Teaser %>
+										$Teaser
+									<% else %>
+										$Content.FirstParagraph
+									<% end_if %>
 								</p>
 							</div>
 						</div>
